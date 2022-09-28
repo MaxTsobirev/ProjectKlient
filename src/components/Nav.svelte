@@ -51,7 +51,7 @@
 <nav>
 	<ul>
 
-		<li><a aria-current="{segment === 'register' ? 'page' : undefined}" href="register">register</a></li>
+		<li><a aria-current="{segment === 'register' ? 'page' : undefined}" href="register">Register</a></li>
 
 	</ul>
 </nav>
