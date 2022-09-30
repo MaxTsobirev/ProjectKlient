@@ -5,12 +5,12 @@
 	const { session } = stores();
 
 	let username = '';
-	let email = '';
+	let name = '';
 	let password = '';
-	let errors = null;
+	let errors = '';
 
 	async function submit(event) {
-		const response = await post(`auth/register`, { username, email, password });
+		const response = await post(`auth/register`, { username, name, password });
 
 		// TODO handle network errors
 		errors = response.errors;
@@ -39,10 +39,10 @@
 
 				<form on:submit|preventDefault={submit}>
 					<fieldset class="form-group">
-						<input class="form-control form-control-lg" type="text" required placeholder="Your Name" bind:value={username}>
+						<input class="form-control form-control-lg" type="text" required placeholder="Your UserName" bind:value={username}>
 					</fieldset>
 					<fieldset class="form-group">
-						<input class="form-control form-control-lg" type="email" required placeholder="Email" bind:value={email}>
+						<input class="form-control form-control-lg" type="name" required placeholder="name" bind:value={name}>
 					</fieldset>
 					<fieldset class="form-group">
 						<input class="form-control form-control-lg" type="password" required placeholder="Password" bind:value={password}>
