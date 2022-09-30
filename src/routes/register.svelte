@@ -7,7 +7,7 @@
 	let username = '';
 	let name = '';
 	let password = '';
-	let errors = '';
+	let errors = 'null';
 
 	async function submit(event) {
 		const response = await post(`auth/register`, { username, name, password });
@@ -35,7 +35,8 @@
 					<a href="/login">Have an account?</a>
 				</p>
 
-                    {errors}
+
+                    <div class="alert alert-danger" role="alert">{errors}</div>
 
 				<form on:submit|preventDefault={submit}>
 					<fieldset class="form-group">
